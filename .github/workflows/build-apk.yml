@@ -34,6 +34,9 @@ jobs:
       - name: Extract Android project
         run: unzip -o Masrofy-Android-Offline-Daily-Backup.zip
 
+      - name: Apply updated index.html
+        run: cp index.html masrofy-android/app/src/main/assets/www/index.html
+
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
